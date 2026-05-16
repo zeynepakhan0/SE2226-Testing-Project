@@ -1,0 +1,1470 @@
+{
+  "id": "05f6c599-b29d-4a6a-9395-f396293b96b9",
+  "version": "3.0",
+  "name": "OrangeHRM_Test_Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "dc2ffb38-96ce-4ff2-b3e3-0ab14c02988e",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "b6e25c0c-8784-4e07-a7b2-5086f828cad8",
+      "name": "TC_Login_Valid",
+      "commands": [
+        {
+          "id": "de389fff-704e-49a6-9c13-ac30a97a4f60",
+          "command": "open",
+          "target": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "name=username",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "98ac44cb-8031-46ad-a9e5-b4c8f854396c",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=username",
+          "value": "Admin",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ecbb0c89-f182-42d1-b70b-90952b24526e",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=password",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "718a0788-6877-427f-a17f-6d81f00cbc1b",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "admin123",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "e7614f5f-647d-4269-a5e5-3de7b1e0543a",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "a1cecf66-911d-4470-80c5-88d7d5ffd54c",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Login '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Login')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "55942463-11e8-4ed6-b2e6-239024981123",
+      "name": "TC_PIM_AddEmployee_Valid",
+      "commands": [
+        {
+          "id": "af31b674-df93-4d87-bfff-b29f6c395241",
+          "command": "open",
+          "target": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "name=username",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "3e6261b9-6161-4899-9d37-0fa5d1156891",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=username",
+          "value": "Admin",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9677a70e-0cad-45d3-87e7-dba66a663485",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=password",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "58f4ad23-63cd-4a1c-9814-8782fb291932",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "admin123",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "463a42bf-71ef-4ef4-a09e-d7043d64defb",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "6a607dbd-36c0-46b5-b050-29c828d2d54b",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Login '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Login')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseOver",
+          "target": "linkText=Leave",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9c45f33e-7afa-4fcb-8486-eaa4d271a293",
+          "targets": [
+            [
+              "linkText=Leave",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(3) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[3]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/leave/viewLeaveModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Leave')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseOver",
+          "target": "linkText=PIM",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "16540e6d-3a2d-402b-999c-16cd9e6c44e7",
+          "targets": [
+            [
+              "linkText=PIM",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(2) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[2]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/pim/viewPimModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'PIM')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseOver",
+          "target": "linkText=Time",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ee0c9c53-cab0-43db-b3b5-03272f654ca3",
+          "targets": [
+            [
+              "linkText=Time",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(4) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[4]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/time/viewTimeModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Time')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=PIM",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "59d5d087-f87f-4308-ad77-282218ae3b44",
+          "targets": [
+            [
+              "linkText=PIM",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(2) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[2]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/pim/viewPimModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'PIM')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-button--secondary:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "b9d94a55-4408-4c76-a917-7fd5939c142b",
+          "targets": [
+            [
+              "css=.oxd-button--secondary:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='button' and text()=' Add '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div[2]/div/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,' Add')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=firstName",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "6effe17f-771d-4df1-8bfe-8ce689d027a4",
+          "targets": [
+            [
+              "name=firstName",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='firstName'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div[2]/div/div/div/div/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=firstName",
+          "value": "Deniz",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "40c99f57-5575-41ab-acbe-c569b0665080",
+          "targets": [
+            [
+              "name=firstName",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='firstName'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div[2]/div/div/div/div/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=lastName",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "b7bb53f3-e85e-4f3b-b930-10f6adb5e9a8",
+          "targets": [
+            [
+              "name=lastName",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='lastName'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div[2]/div/div/div/div/div[2]/div[3]/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=lastName",
+          "value": "Acar",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "5b518e32-5615-4e25-a148-200cfcbd5eb1",
+          "targets": [
+            [
+              "name=lastName",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='lastName'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div[2]/div/div/div/div/div[2]/div[3]/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-button--secondary",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "e4ed1b3e-00d8-4494-aeda-156cf67c90f2",
+          "targets": [
+            [
+              "css=.oxd-button--secondary",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Save '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[2]/button[2])[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Save')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ed12f476-5660-4239-8cf0-b4389a2c9cea",
+      "name": "TC_Leave_RequiredValidation",
+      "commands": [
+        {
+          "id": "477546aa-3d2f-4649-b070-362333801b26",
+          "command": "open",
+          "target": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "name=username",
+          "value": "Admin",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "2d2fd8db-941e-4cf8-8e47-b6448ab3dffd",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=password",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "539473fb-9a6d-47b4-9626-8ad46a232584",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "admin123",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "23b8fb72-7357-4fda-9f06-1d03d4cea976",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ebac7fa9-dd92-437d-88ee-932d95fdbe51",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Login '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Login')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Leave",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "20c57fe2-e50b-447d-a003-bc9de64b29cd",
+          "targets": [
+            [
+              "linkText=Leave",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(3) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[3]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/leave/viewLeaveModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Leave')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.bi-three-dots-vertical",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "dd09e89c-e8c2-45cc-8e95-9049dde78b1b",
+          "targets": [
+            [
+              "css=.bi-three-dots-vertical",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/header/div[2]/nav/ul/li[5]/span/i)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Assign Leave",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "50b35964-ad42-41a6-a443-a31a5073deea",
+          "targets": [
+            [
+              "linkText=Assign Leave",
+              "linkText"
+            ],
+            [
+              "css=div:nth-child(3) > li > .oxd-topbar-body-nav-tab-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Assign Leave')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/header/div[2]/nav/ul/li[5]/ul/div[3]/li/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '#')])[5]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Assign Leave')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "71c2dc9f-a1c1-4093-a0b5-38e193746a0f",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Assign '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[5]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Assign')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseOver",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7abd9dd4-58cc-4942-a466-cc8db0f348a2",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Assign '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[5]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Assign')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5c3a0128-adab-4497-a538-6e225140faad",
+      "name": "TC_Login_Invalid_Credentials",
+      "commands": [
+        {
+          "id": "e304965e-9fae-47c9-8486-3aa9799d0a6a",
+          "command": "open",
+          "target": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "name=username",
+          "value": "Admin",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7101ca07-22ab-4946-9c54-5c38ad3ef373",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=password",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "53e3ce45-51e0-44f9-a10d-1c8ed652c76d",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "admin1234",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9021de00-7f4c-480e-8651-e6813ab7a99f",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "1e7d4341-9ab8-413e-b22e-d31dfaafd981",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Login '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Login')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "88adf3cc-db2c-4f12-858c-99a98f3c8b64",
+      "name": "TC_Leave_Assign_Valid",
+      "commands": [
+        {
+          "id": "9e47fe89-9bc2-4663-bb8f-de0408377ce2",
+          "command": "open",
+          "target": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "name=username",
+          "value": "Admin",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "053479b0-4b81-4966-9e9a-5d85e33d036c",
+          "targets": [
+            [
+              "name=username",
+              "name"
+            ],
+            [
+              "css=[data-v-1f99f73c]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='username'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "name=password",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "714253c3-5911-4f07-ab7c-1bab2dc7741f",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "admin123",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7c5137a8-9dc6-4305-aa24-d1da21efc1c4",
+          "targets": [
+            [
+              "name=password",
+              "name"
+            ],
+            [
+              "css=.oxd-input--focus",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@name='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[2]/div/div[2]/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "88c3e24c-0e8e-4624-93e3-8f08cf894903",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Login '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Login')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.bi-list",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0c4a8300-5cab-4d08-9bec-c60700f5f082",
+          "targets": [
+            [
+              "css=.bi-list",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/header/div/div/i)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Leave",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9bab6507-bd12-46b2-94e6-1460cc5d7d70",
+          "targets": [
+            [
+              "linkText=Leave",
+              "linkText"
+            ],
+            [
+              "css=.oxd-main-menu-item-wrapper:nth-child(3) > .oxd-main-menu-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/aside/nav/div[2]/ul/li[3]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/web/index.php/leave/viewLeaveModule')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Leave')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-topbar-body-nav-tab:nth-child(5) > .oxd-topbar-body-nav-tab-item",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "26335cb7-b4ce-4a9a-be21-411675b6c066",
+          "targets": [
+            [
+              "css=.oxd-topbar-body-nav-tab:nth-child(5) > .oxd-topbar-body-nav-tab-item",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/header/div[2]/nav/ul/li[5]/span)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//span[contains(.,'More ')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=div:nth-child(3) > li",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "f8cc5dae-aa47-4a1c-8fbc-d8df421a1966",
+          "targets": [
+            [
+              "css=div:nth-child(3) > li",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div/header/div[2]/nav/ul/li[5]/ul/div[3]/li)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-autocomplete-text-input > input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "74d50b42-fd98-4e28-9f7a-3fa18dee22a2",
+          "targets": [
+            [
+              "css=.oxd-autocomplete-text-input > input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div/div/div/div[2]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.oxd-autocomplete-text-input > input",
+          "value": "Joseph  Evans",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "8ca082f7-4af8-46fc-ae67-495b355cfd76",
+          "targets": [
+            [
+              "css=.oxd-autocomplete-text-input > input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div/div/div/div/div[2]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "mouseUp",
+          "target": "css=.oxd-grid-4 > .oxd-grid-item:nth-child(1) > .oxd-input-group",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "01fcf5a4-c1ec-4d20-ac53-44cf3c9a479e",
+          "targets": [
+            [
+              "css=.oxd-grid-4 > .oxd-grid-item:nth-child(1) > .oxd-input-group",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[3]/div/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-67d2aedf]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "a03c616b-25f1-44a4-a0ba-cf6112472318",
+          "targets": [
+            [
+              "css=[data-v-67d2aedf]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-select-text",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[2]/div/div/div/div[2]/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "mouseUp",
+          "target": "css=.orangehrm-leave-balance-text",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "77846fdf-8458-42c9-a5ab-4d3c2cd497bd",
+          "targets": [
+            [
+              "css=.orangehrm-leave-balance-text",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/p)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//p[contains(.,'0.00 Day(s)')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-grid-item:nth-child(1) .oxd-date-wrapper .oxd-icon",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "012a2ea0-66ca-4fa0-a7f4-4b76f65bc180",
+          "targets": [
+            [
+              "css=.oxd-grid-item:nth-child(1) .oxd-date-wrapper .oxd-icon",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[3]/div/div/div/div[2]/div/div/i)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.oxd-calendar-date-wrapper:nth-child(22) > .oxd-calendar-date",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "99e27e4b-3c95-432f-bca4-883baa364bfe",
+          "targets": [
+            [
+              "css=.oxd-calendar-date-wrapper:nth-child(22) > .oxd-calendar-date",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[3]/div/div/div/div[2]/div/div[2]/div/div[3]/div[22]/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=[data-v-10d463b7]",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "27104e3b-de86-47ee-accd-d783667c8340",
+          "targets": [
+            [
+              "css=[data-v-10d463b7]",
+              "css:data-attr"
+            ],
+            [
+              "css=.oxd-button",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()=' Assign '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/form/div[6]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Assign')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "runScript",
+          "target": "window.scrollTo(0,470.3999938964844)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "fdec7c27-3edf-46f0-803c-cd5245e5c2e0",
+          "targets": [
+            [
+              "window.scrollTo(0,470.3999938964844)",
+              ""
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.orangehrm-button-margin:nth-child(2)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "8e9c0e5b-e38e-4d9d-9c4f-a197278c9bc1",
+          "targets": [
+            [
+              "css=.orangehrm-button-margin:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='button' and text()=' Ok '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div[3]/div/div/div/div[3]/button[2])[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Ok')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}

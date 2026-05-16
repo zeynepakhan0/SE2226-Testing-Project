@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= message
+  h2= err.message
+  pre #{err.stack}
+  a(class="button" href="/") Back to the "Books" Page

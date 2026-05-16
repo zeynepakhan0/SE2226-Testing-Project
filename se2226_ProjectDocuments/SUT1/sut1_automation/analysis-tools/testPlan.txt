@@ -1,0 +1,438 @@
+SE 2226 Test Plan
+Group Members:
+• Helin Güler (23070006014)
+• Deniz Berfin Acar (24070006021)
+• Aslı Zeynep Akhan (23070006010)
+• Şevval Demir (23070006077)
+1. Context of testing
+1.1 Project/test levels/test types:
+Project Identification: This test plan identifies the testing strategies for two distinct target
+applications (Systems Under Test):
+• SUT 1 (OrangeHRM): A web-based HRM system used for Black-Box and Automation testing.
+• SUT 2 (Library-DB-Express): A backend Node.js application used for White-Box testing.
+Test Levels:
+• Unit Testing: This level will be performed on SUT 2. The goal is to verify individual backend
+functions and API endpoints in isolation to ensure code-level correctness.
+• System Testing: This level will be performed on SUT 1. The application will be tested as a
+complete, integrated system to validate end-to-end business requirements through the user
+interface.
+Test Types:
+• Black-Box Testing (Functional): Focuses on testing the requirements of OrangeHRM without
+internal code knowledge. The following techniques will be applied:
+- Equivalence Class Partitioning (ECP) & Boundary Value Analysis (BVA): For
+validating input fields and data constraints in the PIM, and Leave modules.
+- Use Case Testing: To verify the "Add Employee" workflow within the PIM module.
+- Decision Tables: To test the business logic of the "Leave Request/Approval" process in the
+Leave module.
+• Performance, Load, Stress, and Endurance (Soak) Testing: Performed on SUT 1 to evaluate
+responsiveness, stability under peak loads, and long-term resilience under continuous traffic. This
+ensures the application can handle expected traffic and sustained sessions without performance
+degradation or connection exhaustion
+• Compatibility Testing: Performed on SUT 1 to ensure the application’s core functionalities
+(Login, PIM) remain consistent across different web browsers (e.g., Chrome, Firefox, Edge).• Usability Testing: A heuristic-based evaluation of SUT 1 to assess user-friendliness, navigation
+efficiency, and the clarity of system feedback during key workflows.
+• Automated Testing: Selenium will be used to automate repetitive functional test cases. Most
+tests will be designed using Selenium IDE, while at least two key scenarios (e.g., Login and Add
+Employee) will be exported and executed as scripts using Selenium WebDriver to demonstrate
+scripting proficiency.
+• White-Box Testing (Structural): Focuses on the internal logic and structure of the SUT 2
+source code. It includes:
+- Unit Testing: API endpoints and backend functions will be tested using Jest and Supertest
+to ensure HTTP request/response cycles are handled correctly.
+- Security Testing: Ensuring basic authentication mechanisms and authorized access to data
+by verifying API endpoint protection, input validation, error handling, and resource access control
+through URL parameters.
+- Coverage & Mutation Analysis: Measuring test thoroughness through statement coverage
+and using the Stryker tool for mutation testing to evaluate test suite robustness.
+1.2 Test items:
+Item 1: OrangeHRM Open Source Application
+• Version/Revision: OrangeHRM OS 5.8
+• Reference: https://opensource-demo.orangehrmlive.com/
+• Purpose: This web-based application is used as the target for system-level functional testing. The
+focus will be on the Login mechanism, PIM (Personnel Information Management), and Leave
+modules to verify business workflows and GUI consistency.
+Item 2: Library-DB-Express Source Code
+• Version/Revision: v1.0 (Course Project Repository)
+• Reference: Source code provided by the lecturer for the SE 2226 term project.
+• Purpose: This backend API and database system is the target for structural white-box testing. The
+focus is to ensure code quality through script-based unit tests using Jest/Mocha, security checks,
+and mutation analysis using Node.js/Express.1.3 Test scope:
+Features to be Tested (In-Scope):
+A. OrangeHRM (SUT 1):
+• Functional Modules:
+- User Authentication: Secure login and logout processes.
+-PIM Module: Verification of the full employee lifecycle, focusing on "Add Employee" for
+record creation and the "Employee List"for searching and managing personal details.
+- Leave Module: End-to-end management of the leave process, including "Apply" for user
+requests, "Entitlements" for checking leave balances, and the "Approve/Reject" supervisor.
+• Design-Based Testing:
+- Input Validation: Applying Equivalence Class Partitioning (ECP) and Boundary Value
+Analysis (BVA) to critical fields like Employee ID, Names, and Dates.
+- Logical Consistency: Verification of complex leave workflows and PIM workflows using
+Decision Tables and Use Case Analysis.
+• Non-Functional & Automation:
+- GUI Automation: Scripting of critical paths (Login, Add Employee) using Selenium IDE
+and WebDriver.
+- Concurrency & Performance: Load, Stress, and Endurance (Soak) testing to evaluate
+system stability, response times, and long-term resilience under high and sustained user
+traffic.
+- Cross-Browser Compatibility: Ensuring consistent behavior on Chrome, Firefox, and
+Edge.
+- Usability & UX Validation: Heuristic evaluation to ensure intuitive navigation and helpful
+system feedback/error messages.
+B. Library-DB-Express (SUT 2) - White-Box & Structural Focus
+• API Verification: Validation of backend communication for all CRUD operations (GET, POST,
+PUT, DELETE).
+• Structural Integrity:
+- White-Box Logic: Detailed verification of internal code paths and decision branches.
+- Code Coverage: Achieving target percentages for Statement and Branch coverage using
+Jest/Istanbul.• Quality & Robustness:
+- Mutation Testing: Evaluating test suite effectiveness and detecting surviving mutants
+using Stryker.
+- Security Logic: Ensuring API endpoint protection, input validation, error handling, and
+resource access control through URL parameters.
+Features NOT to be Tested (Out-of-Scope):
+• Full-Scale Penetration Testing: While security audits and vulnerability assessments (such as
+XSS and input validation) are performed on SUT 2, exhaustive network-level penetration testing
+or external cyber-attack simulations are excluded.
+• Visual/Aesthetic Testing: Purely cosmetic UI elements (specific color hex codes, exact font
+sizes) are excluded, while functional visibility and layout consistency remain in-scope for
+Usability and Compatibility analysis.
+1.4. Test basis:
+The following resources, academic materials, and technical documentations serve as the primary
+basis for the design, implementation, and execution of the tests within this project:
+• Project Guidelines: The official "SE 2226 Term Project" instruction document provided by Doç.
+Dr. Korhan Karabulut, which defines the requirements for both functional and structural analysis.
+• SE 2226 Course Materials: Academic lecture notes and slides provided during the semester,
+specifically focusing on:
+-Black-Box Methodologies: Equivalence Class Partitioning (ECP), Boundary Value Analysis
+(BVA), Use Case Testing, and Decision Table Methods.
+-White-Box Methodologies: Unit Testing principles, Statement and Branch Coverage
+requirements, and Mutation Analysis logic.
+• System Functional Specifications:
+-The live functional behavior and user interface of the OrangeHRM Open Source Demo (v5.8),
+which serves as the requirement source for Black-Box test cases.
+-The backend API architecture and source code of the Library-DB-Express application, which
+serves as the basis for White-Box unit tests.
+• International Standards: ISO/IEC/IEEE 29119 (Software Testing Standard) and IEEE 829
+(Standard for Software Test Documentation) are used as the structural framework for this test
+plan.
+• Tool Documentation: Official technical guides for Selenium IDE/WebDriver (for GUI
+automation scripts) and Stryker (for mutation testing analysis).2. Assumptions and constraints
+Assumptions:
+• System Availability: It is assumed that both the OrangeHRM public demo and the Library-DB-
+Express source code will be consistently accessible throughout the project duration.
+• Source Code Integrity: It is assumed that the provided backend source code is functionally
+complete and allows for the execution of unit tests without requiring external proprietary licenses.
+• Technical Capability: It is assumed that the project team possesses the necessary technical
+proficiency to operate testing tools such as Selenium WebDriver, Stryker, Jest, and Supertest.
+• Environmental Stability: It is assumed that the local development environments (Node.js, Java,
+Chrome Driver) are correctly configured to support the execution of the test scripts.
+Constraints:
+• Project Deadline: The most significant constraint is the final submission and presentation date,
+fixed for May 8th, 2026.
+• Budgetary Limits: As an academic exercise, the project is restricted to open-source and free-tier
+tools. No budget is allocated for commercial testing platforms.
+• Scope Boundaries: Testing is focused on functional modules, structural logic, and specific non-
+functional attributes (Performance, Usability, Compatibility). Additionally, the scope includes
+security auditing and vulnerability analysis to evaluate the software's resilience against common
+web threats and ensure high-quality security metrics.
+• Network Dependencies: Testing the OrangeHRM system is dependent on a stable internet
+connection, as it is a cloud-hosted demo environment.
+• Regulatory Standards: All testing activities must adhere to the academic integrity rules defined
+by the university and the specific guidelines provided for the SE 2226 course.
+3. Test strategy
+3.1 General:
+The testing strategy is designed to validate both functional requirements and structural integrity. A
+Risk-Based Testing approach is adopted for SUT 1 (OrangeHRM), focusing on high-priority
+business workflows such as user management and leave processing. For SUT 2 (Library-DB-
+Express), a Structural Testing approach is used to ensure code robustness through automated unit
+testing and mutation analysis.3.2 Test levels:
+• Unit Testing: Performed on SUT 2 to verify individual backend functions, API route controllers,
+and database logic in isolation.
+• System Testing: Performed on SUT 1 to validate the end-to-end functionality of the integrated
+application through the user interface (GUI).
+3.3 Test types:
+• Black-Box Testing (Functional): Focused on validating SUT 1 requirements without looking at
+the internal code, using techniques like ECP, BVA, and Decision Tables.
+• White-Box Testing (Structural): Focused on the internal paths and logic of SUT 2, including
+branch coverage and mutation testing.
+• Automated Testing: Utilizing Selenium for GUI regression and Jest/Supertest for backend unit
+verification.
+• Non-Functional Testing: Includes Performance, Load, Stress, and Endurance (Soak) testing for
+SUT 1 to ensure the system remains stable, responsive, and resilient during both peak traffic and
+extended periods of concurrent user activity.
+• Design & Compatibility Testing: Includes Usability and Compatibility testing for SUT 1 to
+verify cross-browser stability and user-friendly navigation.
+• Security Testing (SUT 2): Focused on identifying vulnerabilities within the backend logic, such
+as information disclosure via stack traces, resource access control, and endpoint resilience against
+malformed inputs.
+3.4 Test deliverables:
+The following test documentation and technical artifacts will be delivered throughout the project
+lifecycle, in accordance with the project requirements and ISO/IEC/IEEE 29119 standards:
+• Master Test Plan: The strategic guiding document (this document) defining the scope and
+approach.
+• Test Model Specification: Documentation of the logical models used for testing, including:
+- Black-Box Models (SUT 1): Equivalence Partitioning (EP), Boundary Value Analysis (BVA),
+Use Case Testing, and Decision Tables for OrangeHRM modules.
+- White-Box Models (SUT 2): Logic analysis focused on ensuring Statement and Branch
+Coverage for the Library-DB-Express backend.
+• Test Case Specification: Detailed manual test cases and automated test steps derived from the
+test models.• Performance & Endurance Analysis Reports: Quantitative reports for SUT 1 detailing
+response times, throughput, and system behavior under stress, including long-term stability
+analysis (Soak Testing) to identify resource exhaustion.
+• Usability Evaluation Report: A document detailing the findings of heuristic evaluations and UX
+improvements for SUT 1.
+• Compatibility Matrix: A cross-browser testing report showing functional consistency across
+Chrome, Firefox, and Edge.
+• Security Audit & Vulnerability Report: A technical document detailing SUT 2 backend
+resilience, focusing on input validation, error handling (stack trace leaks), and API endpoint
+security.
+• Automated Test Scripts: The source code and execution files:
+- SUT 1: Selenium IDE (.side) files and exported WebDriver scripts.
+- SUT 2: JavaScript-based unit test scripts and API validation code.
+• Integrated Incident Reports: Formal records of discovered defects and anomalies, documented
+within their respective technical reports (e.g., Performance, Security, and Mutation reports),
+including severity levels and impact analysis.
+• Coverage & Mutation Reports: Quantitative analysis reports showing:
+- Statement and Branch coverage percentages.
+- Stryker Mutation Analysis results to verify test suite robustness.
+• Test Completion Report (Final Test Summary Report): A comprehensive final report
+summarizing the testing activities, pass/fail ratios, and final quality assessment of both SUT 1 and
+SUT 2.
+3.5 Test design techniques:
+• For SUT 1:
+- Functional: Equivalence Partitioning (EP), Boundary Value Analysis (BVA), Use Case
+Testing, and Decision Tables.
+- Non-Functional & UX: Heuristic Evaluation (for Usability), Cross-Browser Verification (for
+Compatibility), and Quantitative Performance Modeling (for Load, Stress, and Endurance
+testing).
+• For SUT 2: Statement and Branch Coverage (via Jest/Istanbul), Mutation Testing (via Stryker),
+and Logic-based Security Verification. Security testing specifically focuses on:
+- Input Validation: Ensuring resilience against XSS and SQL Injection.
+- Error Handling: Verifying that the system prevents information disclosure (e.g., stack trace
+leaks).- Resource Access Control: Testing endpoint protection against unauthorized URL parameter
+manipulation.
+3.6 Entry and exit criteria:
+Entry Criteria: System test execution shall commence only when the following conditions are
+met:
+• Approval: The Master Test Plan is finalized and signed off by the project team.
+• Documentation: All test cases (Black-Box and White-Box) are documented and approved.
+• Environment Readiness: The SUT 1 (OrangeHRM) demo environment is accessible, and the
+SUT 2 (Library-DB-Express) local environment is correctly configured with Node.js and SQLite.
+• Test Data: Synthetic datasets for ECP, BVA, and security payloads (XSS/SQLi) are prepared and
+ready for injection.
+Exit Criteria: Testing activities are considered complete when:
+• Functional Completion: 100% of high-priority test cases for SUT 1 have been executed, with all
+"Critical" and "High" severity defects resolved.
+• Structural Integrity (SUT 2): A minimum of 95% Statement Coverage and 90% Branch
+Coverage is achieved (Reflecting the high quality verified in the White-Box Report).
+• Robustness Verification: The mutation score must meet the defined threshold, confirming that
+the test suite is capable of detecting logic faults.
+• Security & Risk Assessment: All identified security vulnerabilities (specifically Stack Trace
+leaks and DoS risks) are documented with a final impact analysis.
+• Defect Management: Any remaining Severity 2 or 3 defects are reviewed and logged in the Final
+Test Summary Report for future maintenance.
+3.7 Test completion criteria:
+Testing is finalized when the Exit Criteria are met and the Final Test Summary Report is signed off
+for presentation.
+3.8 Metrics to be collected:
+• Test Case Execution Rate: The percentage of planned test cases that have been executed.
+• Test Case Pass Rate: The ratio of passed tests to total tests executed, tracking the overall
+functional reliability.• Defect Severity Distribution: The classification of identified issues by impact (Critical, High,
+Medium, Low) to prioritize risk management.
+• Code Coverage (SUT 2): Quantitative measurement of Statement and Branch coverage via Jest/
+Istanbul to ensure structural thoroughness.
+• Mutation Score (SUT 2): Evaluation of the test suite’s robustness and fault-detection capability
+using Stryker.
+• Performance Benchmarks (SUT 1): Measurement of Average Response Time, Throughput, and
+Error Rates to evaluate system stability under different load conditions.
+• System Breaking Point: Identification of the load level where system performance degrades
+beyond acceptable reliability thresholds.
+3.9 Test data requirements:
+This section specifies the origin, characteristics, and management of the data required for both
+SUTs:
+• Origin of Data: * SUT 1: Test data is derived from the Equivalence Class Partitioning (ECP)
+and Boundary Value Analysis (BVA) tables.
+- SUT 2: Data is sourced from the backend project repository provided by the lecturer.
+• Specific Data Requirements (SUT 1):
+- Employee ID: Numeric values between 1 and 10 digits (e.g., “5421").
+- Full Names: Alphabetic strings with a length of 2 to 50 characters, including Unicode support
+for non-Latin characters.
+- Photos: Image files meeting the criteria of .jpg, .png, or .gif formats with a size limit of 1MB.
+• Business Logic Data: Conditions for leave requests based on processed status, leave type, date
+validity, and balance sufficiency as defined in the Decision Table.
+• Data Confidentiality: Since open-source and demo environments are used, no real-world
+sensitive personal data is required; all data is synthetic/mock.
+• Responsibility: The Test Analyst and SDET Specialist are responsible for preparing and
+maintaining the test datasets.
+3.10 Test environment requirements:
+To ensure the consistent execution of tests and the reliability of results, the following environment
+requirements must be met:• Hardware: Standard workstation or laptop (Minimum 8GB RAM recommended for running
+automation suites and mutation analysis simultaneously).
+• Operating System: Cross-platform compatibility (Windows 10/11, macOS, or Linux).
+• Browsers: Multi-browser environment including Google Chrome, Mozilla Firefox, and
+Microsoft Edge (Latest versions) to ensure cross-browser compatibility. Corresponding
+ChromeDriver are required for Selenium WebDriver execution.
+• Runtime Environments: * Node.js (LTS Version): Required for SUT 2 and the Jest/Supertest
+frameworks.
+- NPM (Node Package Manager): For managing project dependencies and test tools.
+• Database: SQLite (as integrated within the Library-DB-Express backend) for data persistence
+testing.
+• Testing Tools: * Selenium IDE: For initial GUI test recording (SUT 1).
+- Selenium WebDriver: For scripted automated testing (SUT 1).
+- Jest: For unit and integration testing (SUT 2).
+- Stryker: For mutation testing and robustness analysis (SUT 2).
+- Supertest: Integration testing for REST APIs and simulating HTTP requests to verify endpoint
+responses.
+• Development Tools: Visual Studio Code for developing backend unit tests, debugging Node.js
+scripts, and managing the SUT 2 test environment.
+• Performance Tools: JMeter is utilized for executing Load, Stress, and Endurance (Soak) tests on
+SUT 1. These tools measure system stability and resource consumption during both peak traffic
+and extended operational periods.
+• Connectivity: High-speed stable internet access is mandatory for accessing the OrangeHRM
+Cloud Demo environment.
+3.11 Testing activities and estimates:
+The testing implementation is described through a Work Breakdown Structure (WBS) with
+associated effort estimates:Activity (WBS) Description Estimated Effort
+Test Planning Finalizing the Master Test Plan
+and strategy. 10 Hours
+Test Analysis & Design Designing test cases using ECP,
+BVA, and Use Case models. 23 Hours
+Scripting (SUT 1) Developing Selenium IDE and
+WebDriver scripts. 20 Hours
+Non-Functional Testing
+Conducting Performance, Load,
+Stress, Soak, Usability, and
+Compatibility tests.
+18 Hours
+Backend Testing (SUT 2) Writing Jest/Supertest unit tests
+and security validation code. 15 Hours
+Structural Analysis & Security
+Verification
+Executing Stryker for mutation
+testing, measuring coverage, and
+performing security logic
+verification.
+8 Hours
+Environment Setup Configuring Node.js, Selenium,
+and SQLite environments. 5 Hours
+Reporting & Demo Creating the Test Completion
+Report and project slides. 10 Hours
+Total Estimated Effort 109 Hours
+Budget: No financial budget is allocated as all tools used (Selenium, Jest, Stryker) are open-source.
+4. Staffing
+4.1 General:
+The testing team consists of four specialized members collaborating to ensure the quality of both
+SUT 1 (OrangeHRM) and SUT 2 (Library-DB-Express). While specific roles such as Automation
+Engineer and White-Box SDET are assigned to lead each activity, a cross-functional collaboration
+model is adopted. This ensures that all team members support each other during test analysis, script
+development, and documentation phases to maintain high quality and meet project deadlines.
+4.2 Roles and responsibilities:
+The roles and corresponding responsibilities for the testing activities are distributed as follows:• Test Lead & Management
+- Primary Leader: Helin Güler
+- Secondary Leader: Aslı Zeynep Akhan
+- Responsibilities: Responsible for overall project coordination, assigning tasks, risk
+management, and the final approval of all test artifacts.
+• Documentation Specialist
+- Lead: Aslı Zeynep Akhan
+- Responsibilities: Leading the creation and maintenance of the Master Test Plan, ensuring the
+document is updated iteratively, and consolidating final reports.
+• Test Analyst (Black-Box & Design)
+- Lead: Helin Güler & Şevval Demir
+- Responsibilities: Analyzing SUT 1 requirements. Helin focuses on ECP and BVA techniques,
+while Şevval leads the development of Decision Tables and Use Case Testing.
+1. SUT 1 (OrangeHRM) Focus Areas
+• Automation Engineer
+- Lead: Deniz Berfin Acar
+- Responsibilities: Responsible for creating automated GUI scripts using Selenium IDE and
+exporting key scenarios to WebDriver scripts. This involves transforming ECP, BVA, and
+Use Case tables into executable scripts.
+• Performance & Load Analyst
+- Lead: Helin Güler
+- Responsibilities: Responsible for conducting performance, load, stress, and endurance
+(soak) testing to identify system bottlenecks, long-term stability issues, and breaking points
+under sustained stress.
+• Compatibility Specialist
+- Lead: Aslı Zeynep Akhan
+- Responsibilities: Responsible for verifying system stability and visual consistency across
+different browsers (Chrome, Firefox, Edge) to ensure cross-browser compatibility.
+• Usability Specialist
+- Lead: Şevval Demir- Responsibilities: Responsible for performing heuristic evaluations and analyzing user-
+friendliness, navigation flow, and the effectiveness of system error messages.
+2. White-Box SDET Specialist (SUT 2 - Library-DB-Express)
+Responsibilities: Overall owner of the structural testing process for SUT 2. This role is subdivided
+into the following technical focus areas:
+• LDB Unit & White-Box Logic
+- Lead: Şevval Demir
+- Focus: Managing the Node.js/NPM environment setup and developing backend unit tests
+to verify internal code paths and CRUD operations using Jest and Supertest.
+• LDB Code Coverage Analysis
+- Lead: Helin Güler
+- Focus: Measuring and reporting the statement and branch coverage percentages. The goal
+is to ensure the test suite meets the project's coverage requirements.
+• Mutation & Security Testing
+- Lead: Aslı Zeynep Akhan
+- Focus: Conducting security audits to verify input validation and error handling, while
+performing mutation testing to ensure the robustness and fault-detection capability of the
+test suite.
+3. Documentation & Workflow Notes
+• Workflow Note: The results from Code Coverage and Mutation Testing must be reported
+back to the Unit Test developer (Şevval Demir). This feedback loop is essential for
+identifying weak points and refactoring for higher quality.
+• Incident Reporting: Each team member is responsible for documenting bugs found within
+their specific focus area.
+• Final Integration: Deniz Berfin Acar is responsible for compiling all individual incident
+reports and technical results into the final Test Completion Report and Presentation
+Slides.
+Test Completion Report & Analysis
+• Lead: Deniz Berfin Acar
+• Responsibilities: Consolidating all test results, bug reports, and coverage metrics into the
+final completion report; ensuring all exit criteria are documented and met.
+Final Presentation & Slides• Lead: Deniz Berfin Acar
+• Responsibilities: Designing the project presentation slides, coordinating the demo
+walkthroughs for SUT 1 and SUT 2, and managing the final delivery to the instructor.
+4.3 Schedule:
+The following schedule summarizes the overall testing activities and milestones. The timeline is
+designed to allow for iterative updates to the test plan as analysis and coding progress.
+Activity / Milestone Start Date End Date Deliverables / Outcomes
+Phase 1: Test Planning April 6, 2026 April 19, 2026 Finalized Master Test
+Plan & Strategy
+Phase 2: Test Analysis &
+Design April 11, 2026 April 19, 2026 Test Case Specifications
+& Design Tables
+Phase 3: Environment
+Setup April 18, 2026 April 21, 2026
+Ready Selenium &
+Node.js/SQLite
+environments
+Phase 4: Structural &
+Coverage Testing (SUT
+2)
+April 20, 2026 April 22, 2026
+Statement & Branch
+Coverage Report, Unit
+Test Execution
+Phase 5: Advanced
+Technical Testing (SUT
+1 & 2)
+April 21, 2026 April 30, 2026
+Security Audit Report,
+Mutation Analysis
+Report, Automated Script
+Execution
+Phase 6: Non-
+Functional & UX
+Analysis
+May 1, 2026 May 4, 2026
+Performance &
+Endurance Report,
+Usability &
+Compatibility Report
+Phase 7: Final
+Reporting &
+Submission
+May 5, 2026 May 8, 2026
+Test Completion Report
+(Summary) & Final
+Presentation Slides

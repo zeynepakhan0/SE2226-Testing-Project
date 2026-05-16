@@ -1,0 +1,276 @@
+
+
+Usability Evaluation Report
+
+
+
+SUT1: OrangeHRM Open Source Edition
+
+
+
+Scope of SUT1:
+
+This report evaluates the usability of the OrangeHRM system using heuristic evaluation based on Nielsen’s 10 usability principles. The analysis focuses on how user-friendly the system is, particularly in terms of navigation flow, interface design, and error handling.
+
+The evaluation covers key modules of the system, including the PIM module (Add Employee functionality) and the Leave module (Assign Leave and management processes). It also examines user interaction, system feedback, and error messages to assess the overall user experience and identify areas for improvement.
+
+
+
+
+
+
+
+Prepared By: Şevval Demir
+
+Project: Usability Testing
+
+Status: Final Version(The usability evaluation has been completed and documented.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Visibility of System Status
+
+The system provides feedback when searching records, which helps users understand the system status clearly:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Match Between the System and the Real World
+
+The system uses real world words such as below, that makes it easy for users to understand the interface. 
+
+
+
+
+
+User Control and Freedom
+
+
+
+System informs the user when an operation is not confirmed.
+
+The message is detailed enough.The system also allows users to Cancel operations, which it is proper for Nielsen’s Usability Heuristic and gives users control and freedom.
+
+
+
+
+
+
+
+
+
+
+
+4- Consistency and Standards
+
+The system has consistent buttons and interface elements which provides improved usability.
+
+ That provides better usability for user.
+
+
+
+But also,
+
+System turns into a different language which is setted up as a English before, That problem affects negatively the user’s usability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5- Error Prevention
+
+The system provides logical warnings to help users avoid mistakes, which supports error prevention.
+
+
+
+The warning is clear and leads user to write the correct answer.
+
+
+
+
+
+
+
+
+
+
+
+6- Recognition Rather than Recall
+
+The system provides date pickers, placeholders and dropdown menus to help users to recognize options instead of remembering them. This reduces user effort and also improves usability.
+
+
+
+
+
+
+
+7-Flexibility and Efficiency of Use
+
+The system provides filtering and search options to help user to perform tasks more efficiently. However it doesn’t offer advanced features such as shortcuts or autofills. That could imrove efficiency for experienced users.
+
+
+
+
+
+8- Aesthetic and Minimalist Design
+
+The system has a clean and modern design, However some pages contain many input fields and that makes interface slightly crowded and affects readability. A more minimalist design could improve user’s experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
+9- Help Users Recognize, Diagnose, and Recover from Errors
+
+
+
+In the PIM page, if there is a employee which is not match with records, System displays an error message. However these messages are not detailed enough for users to fully understand the problem.
+
+
+
+
+
+In the PIM’s configuration page, file upload functionality doesnt work properly.Given sample file uploaded to OrangeHRM, It doesn’t work and system shows an error and the operation is unsuccessful, That situation negatively affects usability. 
+
+
+
+
+
+
+
+
+
+İn Leave page Assign part works correctly and It shows error messages in correct places.
+
+This helps user to identify and correct mistakes more easily.
+
+
+
+
+
+
+
+
+
+10- Help and Documentation
+
+The system has a customer support service which helps user to contact for any issues and to share experiences.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Navigation Flow of Add Employee
+
+User logs into the system 
+
+User navigates to the PIM module 
+
+User clicks on “Add Employee” 
+
+User enters employee details 
+
+User clicks the save button 
+
+System validates the input 
+
+System adds the employee and displays confirmation.
+
+
+
+
+
+
+
+Navigation Flow of Leave Assignment
+
+User logs into the system 
+
+User navigates to the Leave module 
+
+User selects “Assign Leave” 
+
+User enters employee name 
+
+User selects leave type 
+
+User selects dates 
+
+User clicks Assign 
+
+System validates input 
+
+System confirms leave assignment.
+
+
+
+
+
+Overall Usability Rating: 85% (Good usability with minor issues).
+
+The system demonstrates good usability, but there are some minor issues that could be improved to enhance the user experience.
+
+
+
+
+
+
+

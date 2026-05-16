@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  h1 Books
+  p 
+    form(action='/books' method='get')
+      label(for='search') Search For Books:
+      input(name='search' type='text' id='search')
+      button Search
+    br
+    a(class="button" href="/books/new") Create New Book 
+    br
+    br
+  if books.length > 0  
+    table   
+      thead   
+        tr 
+          th Title  
+          th Author 
+          th Genre 
+          th Year 
+      tbody 
+        each book in books  
+          tr  
+            td  
+              a(href=`/books/${book.id}`) #{book.title}
+            td= book.author 
+            td= book.genre 
+            td= book.year
+    - var i = page;
+    - var j = pageCount;
+    if search 
+      if page > 1
+        a(href=`/books?search=${search}&page=${--page}`) Previous Page 
+      if i < j 
+        - i++
+        a(href=`/books?search=${search}&page=${i}`)  Next Page
+    else    
+    if page > 1
+      a(href=`/books?page=${--page}`) Previous Page 
+    if i < j 
+      - ++i 
+      a(href=`/books?page=${i}`)  Next Page
+  else  
+    p  The Search Returned No Results
+    a(class="button", href="/") Back to the "Books" Page
