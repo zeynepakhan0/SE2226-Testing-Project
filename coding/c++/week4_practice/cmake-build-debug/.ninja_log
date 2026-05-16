@@ -1,9 +1,0 @@
-# ninja log v6
-8	935	1761155262117565471	CMakeFiles/week4_practice.dir/Submission.cpp.o	1a0e428e5d9e3ae5
-6	948	1761155262116323292	CMakeFiles/week4_practice.dir/Test.cpp.o	12ae4792b9f26d35
-7	1007	1761155262117081440	CMakeFiles/week4_practice.dir/Instructor.cpp.o	486e5eba68250bf5
-8	981	1761155262117332810	CMakeFiles/week4_practice.dir/Assignment.cpp.o	a643fe95214553d2
-1	70	1762092846704597162	build.ninja	b921fcf236dffb59
-1007	1136	1761155263117004818	week4_practice	f736aa7e96807a1
-7	992	1761155262117214229	CMakeFiles/week4_practice.dir/Course.cpp.o	20040a78318ee0b7
-8	994	1761155262117445182	CMakeFiles/week4_practice.dir/Student.cpp.o	b3022dfebc68c8c4

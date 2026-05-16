@@ -1,3 +1,0 @@
-/Users/zeynepakhan/Desktop/coding/c++/week4_practice/cmake-build-debug/CMakeFiles/week4_practice.dir
-/Users/zeynepakhan/Desktop/coding/c++/week4_practice/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zeynepakhan/Desktop/coding/c++/week4_practice/cmake-build-debug/CMakeFiles/rebuild_cache.dir
